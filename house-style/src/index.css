@@ -1,0 +1,12 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply bg-ink-950 text-zinc-200 antialiased; font-family: ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif; }
+@layer components {
+  .card { @apply rounded-xl border border-ink-700 bg-ink-900 p-5; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg border border-ink-600 px-4 py-2 text-sm text-zinc-200 transition hover:bg-ink-700 active:scale-95 disabled:opacity-50; }
+  .btn-gold { @apply border-gold bg-gold font-medium text-ink-950 hover:bg-gold-soft; }
+  .input { @apply w-full rounded-lg border border-ink-600 bg-ink-800 px-3 py-2 text-sm text-zinc-100 outline-none focus:border-gold; }
+  .label { @apply mb-1 block text-xs text-zinc-400; }
+}
+@keyframes pop { from { opacity: 0; transform: translateY(8px) scale(.98) } to { opacity: 1; transform: none } }
+.pop { animation: pop .18s ease-out }
+@media (prefers-reduced-motion: reduce) { .pop { animation: none } }
